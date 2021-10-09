@@ -1,0 +1,26 @@
+08:02:49 **** Auto Build of configuration Debug for project MB1_RTOS ****
+make all 
+'Building file: ../src/elt3017_draw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/elt3017_draw.o" -I../../freertos_mb_1/mb1/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -MMD -MP -MF"src/elt3017_draw.d" -MT"src/elt3017_draw.o" -o "src/elt3017_draw.o" "../src/elt3017_draw.c"
+In file included from ../src/elt3017_draw.h:11:0,
+                 from ../src/elt3017_draw.c:10:
+../src/mb1.h:7:10: note: #pragma message: Running A Dinosaur Game
+  #pragma message "Running A Dinosaur Game"
+          ^
+'Finished building: ../src/elt3017_draw.c'
+' '
+'Building target: MB1_RTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_mb_1/mb1/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -o "MB1_RTOS.elf"  ./src/elt3017_draw.o ./src/main_dino.o ./src/main_intr.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: MB1_RTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MB1_RTOS.elf  |tee "MB1_RTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  96016	   1768	  69672	 167456	  28e20	MB1_RTOS.elf
+'Finished building: MB1_RTOS.elf.size'
+' '
+
+08:02:52 Build Finished (took 2s.862ms)
+
